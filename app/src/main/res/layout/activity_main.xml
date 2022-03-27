@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- The search and navigation functions -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#581845"
+        android:weightSum="12"
+        android:paddingBottom="20dp"
+        >
+
+        <ImageButton
+            android:id="@+id/backbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_marginTop="35dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:onClick="backButton"
+            android:src="@drawable/ic_baseline_arrow_back_ios_24" />
+
+        <ImageButton
+            android:id="@+id/forwarbutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_marginTop="35dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:onClick="forwardButton"
+            android:src="@drawable/ic_baseline_arrow_forward_ios_24" />
+
+        <ImageButton
+            android:id="@+id/refresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_marginTop="35dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:onClick="refreshButton"
+            android:src="@drawable/ic_baseline_refresh_24" />
+
+        <EditText
+            android:id="@+id/url"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_weight="8"
+            android:hint="Search..."
+            android:textColorHint="@color/colorPrimaryDark"
+            android:paddingTop="20dp"
+            android:background="@drawable/edit_text"
+            android:paddingVertical="12dp"
+            android:paddingLeft="20dp"
+            android:layout_marginTop="25dp"
+            />
+
+        <ImageButton
+            android:id="@+id/search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_marginTop="35dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:onClick="searchStuff"
+            android:src="@drawable/ic_baseline_search_24" />
+
+    </LinearLayout>
+
+
+    <!-- Actual WebView -->
+
+    <WebView
+        android:id="@+id/browser"
+        android:layout_width="match_parent"
+        android:layout_height="600dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#581845"
+        android:gravity="center"
+
+        >
+
+        <Button
+            android:id="@+id/jsButton1"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:onClick="weirdJsButton1"
+            android:backgroundTint="#DAF7A6"
+            android:text="Hello World"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_marginRight="20dp"
+            />
+
+        <Button
+            android:id="@+id/jsButton2"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:onClick="weirdJsButton2"
+            android:backgroundTint="#DAF7A6"
+            android:text="Moi Maailma"
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_marginLeft="20dp"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>
